@@ -15,8 +15,9 @@ local apple = sbar.add("item", {
   label = { drawing = false },
   background = {
     color = colors.transparent,
-    border_color = colors.bg2,
-    border_width = 1
+    border_color = colors.grey,
+    border_width = 1,
+    corner_radius = 0,
   },
   padding_left = 1,
   padding_right = 1,
@@ -28,7 +29,8 @@ sbar.add("bracket", { apple.name }, {
   background = {
     color = colors.transparent,
     height = 30,
-    border_color = colors.grey,
+    border_color = colors.black,
+    corner_radius = 0,
   }
 })
 

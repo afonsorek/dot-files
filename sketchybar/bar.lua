@@ -4,9 +4,19 @@ local colors = require("colors")
 sbar.bar({
 	height = 46,
 	blur_radius = 10,
-	color = colors.bar.bg,
-	border_color = "glow(0xFF6FCB9F)",
-	border_width = 2,
+	image = {
+      drawing = true,
+      string = "~/.config/sketchybar/media/bar.png",
+      border_color = 0x00000000,
+      corner_radius = 0,
+      scale = 0.8,
+      padding_left = 0,
+      height = 30,
+	  y_offset = 15
+	},
+	border_color = 0x00000000,
+	color = 0x00000000,
+	border_width = 0,
 	padding_right = 6,
 	padding_left = 6,
 	display = main,

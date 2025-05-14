@@ -47,7 +47,7 @@ local scroller = sbar.add("item", {
     border_width = 1
   },
   scroll_texts = true,
-  scroll_duration = 2000,
+  -- scroll_duration = 2000,
   click_script = "open -a 'Calendar'"
 })
 

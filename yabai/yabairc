@@ -23,16 +23,16 @@ yabai -m config mouse_action2 resize
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding 40
-yabai -m config bottom_padding 40
-yabai -m config left_padding 50
-yabai -m config right_padding 50
+yabai -m config top_padding 20
+yabai -m config bottom_padding 20
+yabai -m config left_padding 20
+yabai -m config right_padding 20
 yabai -m config window_gap 18
 
 # add 20 padding to the top and 0 padding to the bottom of every space located on the main display
-yabai -m config external_bar main:20:20
+yabai -m config external_bar main:0:20
 # add 20 padding to the top and bottom of all spaces regardless of the display it belongs to
-yabai -m config external_bar all:40:50
+yabai -m config external_bar all:0:40
 
 # rules
 ## makes system preferences always floating

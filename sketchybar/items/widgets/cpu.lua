@@ -8,7 +8,10 @@ sbar.exec("killall cpu_load >/dev/null; $CONFIG_DIR/helpers/event_providers/cpu_
 
 local cpu = sbar.add("graph", "widgets.cpu" , 42, {
   position = "right",
-  graph = { color = colors.blue },
+  graph = { 
+    color = colors.blue,
+    border_color = colors.transparent,
+  },
   background = {
       color = colors.transparent,
       image = {
@@ -22,13 +25,17 @@ local cpu = sbar.add("graph", "widgets.cpu" , 42, {
     },
     border_color = colors.transparent,
   },
-  icon = { string = icons.cpu },
+  icon = { 
+    string = icons.cpu,
+    border_color = colors.transparent,
+   },
   label = {
     string = "cpu ??%",
     font = {
       family = settings.font.numbers,
       style = settings.font.style_map["Bold"],
       size = 9.0,
+      border_color = colors.transparent,
     },
     align = "right",
     padding_right = 0,

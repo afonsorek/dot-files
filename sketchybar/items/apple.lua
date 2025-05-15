@@ -7,10 +7,10 @@ sbar.add("item", { width = 5 })
 
 local apple = sbar.add("item", "apple", {
   icon = {
-    font = { size = 16.0 },
+    font = { size = 14.0 },
     string = icons.apple,
     padding_right = 0,
-    padding_left = 12,
+    padding_left = 9,
     border_color = 0x00000000,
   },
   label = { 
@@ -35,6 +35,7 @@ local apple = sbar.add("item", "apple", {
     border_width = 0,
     border_color = 0x00000000, -- Totalmente transparente
   },
+  y_offset = -1,
   width = -1,
   padding_left = 1,
   padding_right = 1,

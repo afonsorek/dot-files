@@ -11,10 +11,10 @@ for i = 1, 10, 1 do
     icon = {
       font = { family = settings.font.numbers },
       string = i,
-      padding_left = 15,
+      padding_left = 10,
       padding_right = 8,
       color = colors.white,
-      highlight_color = colors.red,
+      highlight_color = colors.white,
     },
     label = {
       padding_right = 20,
@@ -26,12 +26,21 @@ for i = 1, 10, 1 do
     padding_right = 1,
     padding_left = 1,
     background = {
-      color = colors.bg1,
+      color = colors.transparent,
+      image = {
+      drawing = true,
+      string = "~/.config/sketchybar/media/space.png",
+      border_color = 0x00000000,
+      corner_radius = 0,
+      scale = 1.0,
+      padding_left = 0,
+      height = 20,
+    },
       border_width = 1,
       height = 26,
-      border_color = colors.black,
+      border_color = colors.transparent,
     },
-    popup = { background = { border_width = 5, border_color = colors.black } }
+    popup = { background = { border_width = 5, border_color = colors.transparent } }
   })
 
   spaces[i] = space
@@ -40,7 +49,7 @@ for i = 1, 10, 1 do
   local space_bracket = sbar.add("bracket", { space.name }, {
     background = {
       color = colors.transparent,
-      border_color = colors.bg2,
+      border_color = colors.transparent,
       height = 28,
       border_width = 2
     }
@@ -72,10 +81,10 @@ for i = 1, 10, 1 do
     space:set({
       icon = { highlight = selected, },
       label = { highlight = selected },
-      background = { border_color = selected and colors.red or colors.bg2 }
-    })
-    space_bracket:set({
-      background = { border_color = selected and colors.white or colors.bg2 }
+      background = { 
+        image = selected and "~/.config/sketchybar/media/space-interno.png" or "~/.config/sketchybar/media/space.png",
+        border_color = colors.transparent,
+      }
     })
   end)
 

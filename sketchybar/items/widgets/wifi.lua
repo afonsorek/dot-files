@@ -10,7 +10,8 @@ local popup_width = 250
 
 local wifi_up = sbar.add("item", "widgets.wifi1", {
   position = "right",
-  padding_left = -5,
+  padding_left = 0,
+  padding_right = 12,
   width = 0,
   icon = {
     padding_right = 0,
@@ -35,6 +36,7 @@ local wifi_up = sbar.add("item", "widgets.wifi1", {
 local wifi_down = sbar.add("item", "widgets.wifi2", {
   position = "right",
   padding_left = -5,
+  padding_right = 12,
   icon = {
     padding_right = 0,
     font = {
@@ -58,6 +60,8 @@ local wifi_down = sbar.add("item", "widgets.wifi2", {
 local wifi = sbar.add("item", "widgets.wifi.padding", {
   position = "right",
   label = { drawing = false },
+  padding_right = 10,
+  padding_left = 4,
 })
 
 -- Background around the item
@@ -66,7 +70,21 @@ local wifi_bracket = sbar.add("bracket", "widgets.wifi.bracket", {
   wifi_up.name,
   wifi_down.name
 }, {
-  background = { color = colors.bg1 },
+  width = 60,
+  background = {
+      color = colors.transparent,
+      image = {
+      drawing = true,
+      string = "~/.config/sketchybar/media/item.png",
+      border_color = 0x00000000,
+      corner_radius = 0,
+      scale = 1.0,
+      padding_left = 0,
+      height = 14,
+    },
+    border_color = colors.transparent,
+  },
+  padding_right = 0,
   popup = { align = "center", height = 30 }
 })
 
@@ -152,7 +170,7 @@ local router = sbar.add("item", {
   },
 })
 
-sbar.add("item", { position = "right", width = settings.group_paddings })
+sbar.add("item", { position = "right", width = 0 })
 
 wifi_up:subscribe("network_update", function(env)
   local up_color = (env.upload == "000 Bps") and colors.grey or colors.red

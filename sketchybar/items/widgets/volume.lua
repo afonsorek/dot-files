@@ -16,7 +16,8 @@ local volume_percent = sbar.add("item", "widgets.volume1", {
 
 local volume_icon = sbar.add("item", "widgets.volume2", {
   position = "right",
-  padding_right = -1,
+  padding_right = 4,
+  padding_left = 16,
   icon = {
     string = icons.volume._100,
     width = 0,
@@ -41,13 +42,28 @@ local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", {
   volume_icon.name,
   volume_percent.name
 }, {
-  background = { color = colors.bg1 },
+  width = 80,
+  background = {
+      color = colors.transparent,
+      image = {
+      drawing = true,
+      string = "~/.config/sketchybar/media/item.png",
+      border_color = 0x00000000,
+      corner_radius = 0,
+      scale = 1.0,
+      padding_left = 0,
+      height = 14,
+    },
+    border_color = colors.transparent,
+  },
+  padding_right = 20,
   popup = { align = "center" }
 })
 
 sbar.add("item", "widgets.volume.padding", {
   position = "right",
-  width = settings.group_paddings
+  width = 0,
+  padding_right = 60,
 })
 
 local volume_slider = sbar.add("slider", popup_width, {

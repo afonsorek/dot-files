@@ -96,5 +96,5 @@ sbar.add("bracket", "widgets.battery.bracket", { battery.name }, {
 
 sbar.add("item", "widgets.battery.padding", {
   position = "right",
-  width = settings.group_paddings
+  width = 10,
 })

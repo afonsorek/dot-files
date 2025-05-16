@@ -9,15 +9,16 @@ local volume_percent = sbar.add("item", "widgets.volume1", {
   icon = { drawing = false },
   label = {
     string = "??%",
-    padding_left = -1,
+    padding_left = 10,
+    padding_right = 8,
     font = { family = settings.font.numbers }
   },
 })
 
 local volume_icon = sbar.add("item", "widgets.volume2", {
   position = "right",
-  padding_right = 4,
-  padding_left = 16,
+  padding_right = 0,
+  padding_left = 10,
   icon = {
     string = icons.volume._100,
     width = 0,
@@ -29,7 +30,7 @@ local volume_icon = sbar.add("item", "widgets.volume2", {
     },
   },
   label = {
-    width = 25,
+    width = 50,
     align = "left",
     font = {
       style = settings.font.style_map["Regular"],
@@ -42,7 +43,6 @@ local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", {
   volume_icon.name,
   volume_percent.name
 }, {
-  width = 80,
   background = {
       color = colors.transparent,
       image = {
@@ -56,14 +56,14 @@ local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", {
     },
     border_color = colors.transparent,
   },
-  padding_right = 20,
+  width = 90,
+  padding_right = 0,
   popup = { align = "center" }
 })
 
 sbar.add("item", "widgets.volume.padding", {
   position = "right",
   width = 0,
-  padding_right = 60,
 })
 
 local volume_slider = sbar.add("slider", popup_width, {

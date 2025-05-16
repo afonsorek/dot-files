@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "catppuccin_frappe"
 client_id = "cb65f45ff64043c3ac5b9f0e60c48c74"
 client_port = 8888
 login_redirect_uri = "http://127.0.0.1:8888/login"
@@ -14,7 +14,7 @@ page_size_in_rows = 20
 play_icon = "▶"
 pause_icon = "▌▌"
 liked_icon = "♥"
-border_type = "Plain"
+border_type = "Rounded"
 progress_bar_type = "Rectangle"
 cover_img_length = 9
 cover_img_width = 5
@@ -40,7 +40,7 @@ playlist_percent = 40
 album_percent = 40
 
 [device]
-name = "spotify-player"
+name = "terminal"
 device_type = "speaker"
 volume = 70
 bitrate = 320
